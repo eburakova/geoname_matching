@@ -1,12 +1,12 @@
 # Geoname seach
 
- <a target="_blank" href="[https://colab.research.google.com/github/eburakova/geoname_matching/blob/main/main.ipynb](https://colab.research.google.com/github/eburakova/geoname_matching/blob/main/main.ipynb)">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a> 
+[<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>](https://colab.research.google.com/github/eburakova/geoname_matching/blob/main/main.ipynb)
+
 
 *For Yandex Practicum Career Center*
 
 A hackaton project with the aim to create a tool that would suggest the cities whose names match the query string. 
+Developed and tested on the cities from Eastern Europe and Northen Asia
 
 ➡️ Input: query string (potentially containing misspellings)
 
@@ -23,18 +23,30 @@ Data sources: http://download.geonames.org/export/dump/
 
 ```
  from geonamesearch import search 
- > Connection established: geo_v2 на 77.222.36.33
- q = 'Karaganda'
- search(q, k=5, weight_mode='exp', asdict=False)
+ > Connection established: geo_v2 at 77.222.36.33
 ```
 
-|   geonameid | name        | region                          | country    |   score |
-|------------:|:------------|:--------------------------------|:-----------|--------:|
-|      609655 | Karagandy   | Karaganda                       | Kazakhstan |  98.391 |
-|     2028078 | Aginskoye   | Zabaykalskiy (Transbaikal) Kray | Russia     |  88.391 |
-|      790015 | Inđija      | Vojvodina                       | Serbia     |  78.391 |
-|     1501321 | Kurgan      | Kurgan Oblast                   | Russia     |  73.457 |
-|      553915 | Kaluga      | Kaluga Oblast                   | Russia     |  73.391 |
+```
+q = 'Ржевск'
+search(q, k=3, weight_mode='exp', asdict=False)
+```
+|   geonameid | name    | region             | country    |   score |
+|------------:|:--------|:-------------------|:-----------|--------:|
+|      554840 | Izhevsk | Udmurtiya Republic | Russia     |  85.085 |
+|      499717 | Rzhev   | Tver Oblast        | Russia     |  82.085 |
+|     1528121 | Karakol | Issyk-Kul          | Kyrgyzstan |  77.084 |
+
+```
+q = 'Сталинград'
+search(q, k=3, weight_mode='exp', asdict=False)
+```
+
+|   geonameid | name             | region           | country    |   score |
+|------------:|:-----------------|:-----------------|:-----------|--------:|
+|      472757 | Volgograd        | Volgograd Oblast | Russia     |  88.427 |
+|     1526273 | Astana           | Astana           | Kazakhstan |  74.393 |
+|      498817 | Saint Petersburg | St.-Petersburg   | Russia     |  72.409 |
+
 
 ```
 q = 'Milkyway'
@@ -48,15 +60,6 @@ search(q, k=3, weight_mode='exp', asdict=False)
 |     1526193 | Arkalyk | Qostanay        | Kazakhstan |  70.391 |
 
 ```
-q = 'Сталинград'
-search(q, k=3, weight_mode='exp', asdict=False)
-```
-
-|   geonameid | name             | region           | country    |   score |
-|------------:|:-----------------|:-----------------|:-----------|--------:|
-|      472757 | Volgograd        | Volgograd Oblast | Russia     |  88.427 |
-|     1526273 | Astana           | Astana           | Kazakhstan |  74.393 |
-|      498817 | Saint Petersburg | St.-Petersburg   | Russia     |  72.409 |
 
 ```
 q = 'Berlin'
