@@ -1,5 +1,5 @@
 # Geoname seach
- <a target="_blank" href="https://colab.research.google.com/github/eburakova/geoname_matching/tree/main">
+ <a target="_blank" href="https://colab.research.google.com/github/eburakova/geoname_matching/blob/main/main">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a> 
 
