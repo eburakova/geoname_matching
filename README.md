@@ -1,5 +1,6 @@
 # Geoname seach
- <a target="_blank" href="[https://colab.research.google.com/github/eburakova/geoname_matching/blob/main](https://colab.research.google.com/github/eburakova/geoname_matching/blob/main/main.ipynb)">
+
+ <a target="_blank" href="[https://colab.research.google.com/github/eburakova/geoname_matching/blob/main/main.ipynb](https://colab.research.google.com/github/eburakova/geoname_matching/blob/main/main.ipynb)">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a> 
 
@@ -13,6 +14,8 @@ A hackaton project with the aim to create a tool that would suggest the cities w
 
 
 See [the main notebook](https://github.com/eburakova/geoname_matching/blob/main/main.ipynb) for the detailed description and research.
+
+[Open in CoLab](https://colab.research.google.com/github/eburakova/geoname_matching/blob/main/main.ipynb)
 
 Data sources: http://download.geonames.org/export/dump/
 
