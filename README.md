@@ -6,7 +6,7 @@
 *For Yandex Practicum Career Center*
 
 A hackaton project with the aim to create a tool that would suggest the cities whose names match the query string. 
-Developed and tested on the cities from Eastern Europe and Northen Asia
+Developed and tested on the cities with population > 15000 people in selected contries of Eastern Europe and Northen Asia.
 
 ➡️ Input: query string (potentially containing misspellings)
 
@@ -54,6 +54,7 @@ search(q, k=3, weight_mode='exp', asdict=False)
 
 ```
 # Non-existing city
+
 q = 'Milkyway'
 search(q, k=3, weight_mode='exp', asdict=False)
 ```
