@@ -27,6 +27,8 @@ Data sources: http://download.geonames.org/export/dump/
 ```
 
 ```
+# Misspelled name
+
 q = 'Ржевск'
 search(q, k=3, weight_mode='exp', asdict=False)
 ```
@@ -37,6 +39,8 @@ search(q, k=3, weight_mode='exp', asdict=False)
 |     1528121 | Karakol | Issyk-Kul          | Kyrgyzstan |  77.084 |
 
 ```
+# Valid historical name
+
 q = 'Сталинград'
 search(q, k=3, weight_mode='exp', asdict=False)
 ```
@@ -49,6 +53,7 @@ search(q, k=3, weight_mode='exp', asdict=False)
 
 
 ```
+# Non-existing city
 q = 'Milkyway'
 search(q, k=3, weight_mode='exp', asdict=False)
 ```
@@ -60,8 +65,9 @@ search(q, k=3, weight_mode='exp', asdict=False)
 |     1526193 | Arkalyk | Qostanay        | Kazakhstan |  70.391 |
 
 ```
+# Country out of the scope
+# Unlimited area of search
 
-```
 q = 'Berlin'
 search(q, k=3, weight_mode='exp', asdict=False, country_selection=None) # runs 10 seconds
 ```
@@ -73,8 +79,11 @@ search(q, k=3, weight_mode='exp', asdict=False, country_selection=None) # runs 1
 |     2820577 | Überlingen   | Baden-Wurttemberg | Germany       |  90     |
 
 ```
+# Country out of the scope
+# Known area of search
+
 q = 'Berlin'
-search(q, k=3, weight_mode='exp', asdict=False, country_selection=['DE']).to_markdown()  # runs 0.7s!
+search(q, k=3, weight_mode='exp', asdict=False, country_selection=['DE'])  # runs 0.7s!
 ```
 
 |   geonameid | name              | region            | country   |   score |
