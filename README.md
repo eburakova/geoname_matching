@@ -21,12 +21,15 @@ Data sources: http://download.geonames.org/export/dump/
 
 # `geonamesearch.py` demo
 
-```
- from geonamesearch import search 
+```python
+ from geonamesearch import search
+
+# The data is dtored on a postgres server according to the requirements.
+
  > Connection established: geo_v2 at 77.222.36.33
 ```
 
-```
+```python
 # Misspelled name
 
 q = 'Ржевск'
@@ -38,7 +41,7 @@ search(q, k=3, weight_mode='exp', asdict=False)
 |      499717 | Rzhev   | Tver Oblast        | Russia     |  82.085 |
 |     1528121 | Karakol | Issyk-Kul          | Kyrgyzstan |  77.084 |
 
-```
+```python
 # Valid historical name
 
 q = 'Сталинград'
@@ -52,7 +55,7 @@ search(q, k=3, weight_mode='exp', asdict=False)
 |      498817 | Saint Petersburg | St.-Petersburg   | Russia     |  72.409 |
 
 
-```
+```python
 # Non-existing city
 
 q = 'Milkyway'
@@ -65,7 +68,7 @@ search(q, k=3, weight_mode='exp', asdict=False)
 |      527740 | Melenki | Vladimir Oblast | Russia     |  70.391 |
 |     1526193 | Arkalyk | Qostanay        | Kazakhstan |  70.391 |
 
-```
+```python
 # Country out of the scope
 # Unlimited area of search
 
@@ -79,7 +82,7 @@ search(q, k=3, weight_mode='exp', asdict=False, country_selection=None) # runs 1
 |     5164706 | North Canton | Ohio              | United States |  98.391 |
 |     2820577 | Überlingen   | Baden-Wurttemberg | Germany       |  90     |
 
-```
+```python
 # Country out of the scope
 # Known area of search
 
